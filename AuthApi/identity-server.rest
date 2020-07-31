@@ -1,0 +1,17 @@
+### Mobile login resource owner
+//localhost:5000 Admin123
+// 192.168.120.102:5000  Admin12345678
+POST http://localhost:5000/Identity/Login HTTP/1.1
+content-type: application/json
+ 
+{
+    "identity": "+84987654321",
+    "password": "Admin123456",
+    "scopes": ["identity", "openid", "profile", "api","offline_access"],
+    "clientId": "app"
+}
+
+### Test Web API
+GET https://localhost:44333/weatherforecast HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk4QTZGQzg4N0FEM0VGOTc1QTIwOTVCQkM2MUU3MkQyRThCMDgwQTMiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJtS2I4aUhyVDc1ZGFJSlc3eGg1eTB1aXdnS00ifQ.eyJuYmYiOjE1NzMwOTA4NzQsImV4cCI6MTU3MzA5NDQ3NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIyNzUxNTljNy1lZmI0LTQ5OTItYTg0OC01ZTJlZTIzZDA0ZDciLCJjbGllbnRfaWQiOiJhcHAiLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdDo1MDAwL3Jlc291cmNlcyIsImlkZW50aXR5Iiwib3BlbmlkIiwicHJvZmlsZSIsImFwaSIsIm9mZmxpbmVfYWNjZXNzIl19.Mhq240rLx6nDW4H5g7GcPSXmLie941ftXlIIH8CvaANsEfleIZHPUAQu5rwd8d9dZsCpHbtmf5EnR4hixNOD8XRPo5V1iMxEqdIwNM9ypXJg1sn5oEON_vV11gRRernlDcdbPde1B42MIvN_ZJrss6Z41UzuzC26yiCqLBN0ZTF6rdonkmMH0vBbX-Re7Vp4-e1pq_fLPH4Wp2BTjorEBKu469obmkIYWduMO3gOwDBP3BbKsvSh65TX-70r1SPagKbWqoizj7r9GutD6uLXw2aPG0P4ySiJ-ZTca0tdGTNVqIW_f_FijnmDEBfDeg2LNgKKwpNGWVstolfXI42aXw
